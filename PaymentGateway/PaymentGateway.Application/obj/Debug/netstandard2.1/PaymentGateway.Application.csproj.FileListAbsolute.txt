@@ -1,0 +1,12 @@
+C:\Repos\PaymentGateway\PaymentGateway.Application\bin\Debug\netstandard2.1\PaymentGateway.Application.deps.json
+C:\Repos\PaymentGateway\PaymentGateway.Application\bin\Debug\netstandard2.1\PaymentGateway.Application.dll
+C:\Repos\PaymentGateway\PaymentGateway.Application\bin\Debug\netstandard2.1\PaymentGateway.Application.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Application\bin\Debug\netstandard2.1\PaymentGateway.Domain.dll
+C:\Repos\PaymentGateway\PaymentGateway.Application\bin\Debug\netstandard2.1\PaymentGateway.Domain.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.csprojAssemblyReference.cache
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.AssemblyInfoInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.AssemblyInfo.cs
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.csproj.CoreCompileInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.csproj.CopyComplete
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.dll
+C:\Repos\PaymentGateway\PaymentGateway.Application\obj\Debug\netstandard2.1\PaymentGateway.Application.pdb

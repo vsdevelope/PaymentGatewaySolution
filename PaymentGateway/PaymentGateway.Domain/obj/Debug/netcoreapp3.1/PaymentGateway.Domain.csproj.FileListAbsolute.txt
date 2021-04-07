@@ -1,0 +1,9 @@
+C:\Repos\PaymentGateway\PaymentGateway.Domain\bin\Debug\netcoreapp3.1\PaymentGateway.Domain.deps.json
+C:\Repos\PaymentGateway\PaymentGateway.Domain\bin\Debug\netcoreapp3.1\PaymentGateway.Domain.dll
+C:\Repos\PaymentGateway\PaymentGateway.Domain\bin\Debug\netcoreapp3.1\PaymentGateway.Domain.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.csprojAssemblyReference.cache
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.AssemblyInfoInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.AssemblyInfo.cs
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.csproj.CoreCompileInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.dll
+C:\Repos\PaymentGateway\PaymentGateway.Domain\obj\Debug\netcoreapp3.1\PaymentGateway.Domain.pdb

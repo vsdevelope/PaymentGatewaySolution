@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<ApplicationIcon />
+		<OutputType>Library</OutputType>
+		<StartupObject />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	
+		<PackageReference Include="FluentAssertions" Version="5.10.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.10" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.10" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.10" />
+			<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+		<PackageReference Include="nunit" Version="3.12.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="3.16.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="SpecFlow.NUnit" Version="3.5.14" />
+		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.5.14" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PaymentGateway.Application\PaymentGateway.Application.csproj" />
+	</ItemGroup>
+
+</Project>

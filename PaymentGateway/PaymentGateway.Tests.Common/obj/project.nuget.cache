@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MX573gk5+5s4hPYn8n4gajR3kpLvw6h4kedyaBUcv8Ng1Jd4TP+Dqb9Fy4rHpp730gZ7DXwcuq4rIySf5+z3CA==",
+  "success": true,
+  "projectFilePath": "C:\\Repos\\PaymentGateway\\PaymentGateway.Tests.Common\\PaymentGateway.Tests.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GaneshAdmin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.10\\microsoft.extensions.logging.abstractions.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

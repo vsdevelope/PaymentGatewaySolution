@@ -1,0 +1,8 @@
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netcoreapp3.1\PaymentGateway.Persistence.deps.json
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netcoreapp3.1\PaymentGateway.Persistence.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netcoreapp3.1\PaymentGateway.Persistence.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netcoreapp3.1\PaymentGateway.Persistence.AssemblyInfoInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netcoreapp3.1\PaymentGateway.Persistence.AssemblyInfo.cs
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netcoreapp3.1\PaymentGateway.Persistence.csproj.CoreCompileInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netcoreapp3.1\PaymentGateway.Persistence.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netcoreapp3.1\PaymentGateway.Persistence.pdb

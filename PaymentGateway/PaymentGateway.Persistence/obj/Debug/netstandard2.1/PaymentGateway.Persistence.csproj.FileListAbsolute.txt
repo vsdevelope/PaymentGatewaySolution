@@ -1,0 +1,14 @@
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Persistence.deps.json
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Persistence.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Persistence.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Application.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Domain.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Application.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\bin\Debug\netstandard2.1\PaymentGateway.Domain.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.csprojAssemblyReference.cache
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.AssemblyInfoInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.AssemblyInfo.cs
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.csproj.CoreCompileInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.csproj.CopyComplete
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.dll
+C:\Repos\PaymentGateway\PaymentGateway.Persistence\obj\Debug\netstandard2.1\PaymentGateway.Persistence.pdb

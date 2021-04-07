@@ -1,0 +1,749 @@
+{
+	"info": {
+		"_postman_id": "f6751f15-2c82-4cc9-ab9f-ff82c8155a48",
+		"name": "PaymentGateway",
+		"description": "A collection of HTTP request that target PaymentGateway API. Requires valid \"merchantKey\" header value for successful authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetTransactionDetails",
+			"item": [
+				{
+					"name": "Get details of a transaction without merchantKey header  should receive HTTPStatus 401",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Error message displayed\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.error).to.eql(\"Provide 'merchantKey' in the header\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "All requests to PaymentGate API requires a valid \"merchantKey\" present in the header. \nThe response should be 401 unauthorized in case of missing header or invalid key"
+					},
+					"response": []
+				},
+				{
+					"name": "Get details of a transaction with a invalid merchantKey header  should receive HTTPStatus 401",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Error message displayed\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.error).to.eql(\"Invalid merchantKey in the header\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "merchantKey",
+								"value": "invalidMerchantKey",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"transaction"
+							]
+						},
+						"description": "All requests to PaymentGate API requires a valid \"merchantKey\" present in the header. \nThe response should be 401 unauthorized in case of missing header or invalid header"
+					},
+					"response": []
+				},
+				{
+					"name": "Get details of a transaction with a valid merchantKey header  and transactionId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Error message displayed\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.transactionId).not.eql(undefined);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "eDhl3PO6DZ/lX1Ype9tbFQ=="
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction/10005",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction",
+								"10005"
+							]
+						},
+						"description": "With a valid merchantKey present in the header, merchant can retrieve the details of transaction that belongs to him/her"
+					},
+					"response": []
+				},
+				{
+					"name": "merchant can't access transactions of other merchants",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"pm.test(\"Error message displayed\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.contains(\") is not found\");",
+									"    pm.expect(jsonData).to.contains(\"Transaction (\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "hCQcGPPOf0DKCLSTWDlveQ=="
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction/10003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction",
+								"10003"
+							]
+						},
+						"description": "Merchant has provided a valid merchantKey. however the request contains the transactionId that belongs to some other merchant.\nShould receive 404 Not Found"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostATransaction",
+			"item": [
+				{
+					"name": "Post a transaction without merchantKey in the header",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"pm.test(\"Error message displayed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.error).to.eql(\"Provide 'merchantKey' in the header\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a invalid merchantKey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"pm.test(\"Error message displayed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.error).to.eql(\"Invalid merchantKey in the header\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"value": "invalidMerchantKey",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a valid merchantKey and empty request body",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Error message displayed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    const expectedObject = {\r",
+									"   \"errors\": {\r",
+									"        \"\": [\r",
+									"            \"A non-empty request body is required.\"\r",
+									"        ]\r",
+									"    }\r",
+									"  };\r",
+									"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "hCQcGPPOf0DKCLSTWDlveQ=="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a valid merchantKey and nonempty and invalid request body",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"success should be false\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.success).to.eql(false);\r",
+									"});\r",
+									"pm.test(\"validation errors displayed\", function () {\r",
+									"    \r",
+									"    const expectedObject = {\r",
+									"   \"validationErrors\": [\r",
+									"      \"Merchant Id is required.\",\r",
+									"        \"Amount should be greater than 0\",\r",
+									"        \"Currency is required.\",\r",
+									"        \"'Currency' must not be empty.\",\r",
+									"        \"only GBP currency is supported.\",\r",
+									"        \"Card Number length should be 16\",\r",
+									"        \"CVV length should be between 3 to 4\",\r",
+									"        \"Card already expired\",\r",
+									"        \"'11' not supported for Transaction Type Id\",\r",
+									"        \"Customer Name is required.\"\r",
+									"    ]\r",
+									"  };\r",
+									"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "hCQcGPPOf0DKCLSTWDlveQ=="
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"terminalId\": \"T0002\",\r\n    \"amount\": -101.12,\r\n    \"cardNumber\": \"222\",\r\n    \"cvv\": \"12322\",\r\n    \"expiryDate\": \"12/20\",\r\n    \"customerAddressLine1\": \"Customer 3 AL1\",\r\n    \"postCode\": \"AB3 2CD\",\r\n    \"transactionTypeId\": 11,\r\n    \"TransactionDate\": \"2020-04-03T20:31:57.8565302\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a valid merchantKey and valid request body and for terminal not associated with merchant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "hCQcGPPOf0DKCLSTWDlveQ=="
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\":\"M0001\",\r\n    \"terminalId\": \"T0004\",\r\n    \"amount\": 100,\r\n    \"currency\": \"GBP\",\r\n    \"cardNumber\": \"4444123433331111\",\r\n    \"cvv\": \"123\",\r\n    \"expiryDate\": \"12/22\",\r\n    \"customerName\": \"Mr Customer3\",\r\n    \"customerAddressLine1\": \"Customer 3 AL1\",\r\n    \"postCode\": \"AB3 2CD\",\r\n    \"transactionTypeId\": 3,\r\n    \"TransactionDate\": \"2021-04-04T10:41:57.8565302+01:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a valid merchantKey and valid request body and correct terminal-success",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"success should be true\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.success).to.eql(true);\r",
+									"});\r",
+									"pm.test(\"validation errors should be null\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.validationErrors).to.eql(null);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "eDhl3PO6DZ/lX1Ype9tbFQ=="
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\":\"M0003\",\r\n    \"terminalId\": \"TMX001\",\r\n    \"amount\": 1028.18,\r\n    \"currency\": \"GBP\",\r\n    \"cardNumber\": \"4444123433331111\",\r\n    \"cvv\": \"123\",\r\n    \"expiryDate\": \"01/22\",\r\n    \"customerName\": \"Mr Customer2\",\r\n    \"customerAddressLine1\": \"Customer23 AL1\",\r\n    \"postCode\": \"EH1 2LH\",\r\n    \"transactionTypeId\": 4,\r\n    \"TransactionDate\": \"2021-04-04T10:21:57.8565302+01:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a transaction with a valid merchantKey and valid request body and correct terminal-AcquirerError",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"success should be false\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.success).to.eql(false);\r",
+									"});\r",
+									"pm.test(\"validation errors displayed\", function () {\r",
+									"    \r",
+									"    const expectedObject = {\r",
+									"   \"validationErrors\": [\r",
+									"        \"Merchant Id is required.\",\r",
+									"        \"Amount should be greater than 0\",\r",
+									"        \"Card Number length should be 16\",\r",
+									"        \"CVV length should be between 3 to 4\",\r",
+									"        \"Card already expired\",\r",
+									"        \"'11' not supported for Transaction Type\",\r",
+									"        \"Customer Name is required.\"\r",
+									"    ]\r",
+									"  };\r",
+									"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "merchantKey",
+								"type": "text",
+								"value": "eDhl3PO6DZ/lX1Ype9tbFQ=="
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\":\"M0003\",\r\n    \"terminalId\": \"TMX001\",\r\n    \"amount\": 100,\r\n    \"currency\": \"GBP\",\r\n    \"cardNumber\": \"4444123433332222\",\r\n    \"cvv\": \"123\",\r\n    \"expiryDate\": \"12/22\",\r\n    \"customerName\": \"Mr Customer3\",\r\n    \"customerAddressLine1\": \"Customer 3 AL1\",\r\n    \"postCode\": \"AB3 2CD\",\r\n    \"transactionTypeId\": 3,\r\n    \"TransactionDate\": \"2021-04-03T20:31:57.8565302+01:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post to Acquirer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"success should be false\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.success).to.eql(false);\r",
+									"});\r",
+									"pm.test(\"validation errors displayed\", function () {\r",
+									"    \r",
+									"    const expectedObject = {\r",
+									"   \"validationErrors\": [\r",
+									"        \"Merchant Id is required.\",\r",
+									"        \"Amount should be greater than 0\",\r",
+									"        \"Card Number length should be 16\",\r",
+									"        \"CVV length should be between 3 to 4\",\r",
+									"        \"Card already expired\",\r",
+									"        \"'11' not supported for Transaction Type\",\r",
+									"        \"Customer Name is required.\"\r",
+									"    ]\r",
+									"  };\r",
+									"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"type": "text",
+								"value": "OPtmhC7QiueYeIqy1OkEPQsvuZQdMWlyDE2fjs"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\":\"M0003\",\r\n    \"terminalId\": \"TMX001\",\r\n    \"amount\": 100,\r\n    \"currency\": \"GBP\",\r\n    \"cardNumber\": \"4444123433334444\",\r\n    \"cvv\": \"123\",\r\n    \"expiryDate\": \"12/22\",\r\n    \"customerName\": \"Mr Customer3\",\r\n    \"customerAddressLine1\": \"Customer 3 AL1\",\r\n    \"postCode\": \"AB3 2CD\",\r\n    \"transactionTypeId\": 3,\r\n    \"TransactionDate\": \"2021-04-03T20:31:57.8565302+01:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				},
+				{
+					"name": "Post to Acquirer with invalid apiKey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"success should be false\",function(){\r",
+									"var jsonData=pm.response.json();\r",
+									"pm.expect(jsonData.success).to.eql(false);\r",
+									"});\r",
+									"pm.test(\"validation errors displayed\", function () {\r",
+									"    \r",
+									"    const expectedObject = {\r",
+									"   \"validationErrors\": [\r",
+									"        \"Merchant Id is required.\",\r",
+									"        \"Amount should be greater than 0\",\r",
+									"        \"Card Number length should be 16\",\r",
+									"        \"CVV length should be between 3 to 4\",\r",
+									"        \"Card already expired\",\r",
+									"        \"'11' not supported for Transaction Type\",\r",
+									"        \"Customer Name is required.\"\r",
+									"    ]\r",
+									"  };\r",
+									"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\":\"M0003\",\r\n    \"terminalId\": \"TMX001\",\r\n    \"amount\": 100,\r\n    \"currency\": \"GBP\",\r\n    \"cardNumber\": \"4444123433331111\",\r\n    \"cvv\": \"123\",\r\n    \"expiryDate\": \"12/22\",\r\n    \"customerName\": \"Mr Customer3\",\r\n    \"customerAddressLine1\": \"Customer 3 AL1\",\r\n    \"postCode\": \"AB3 2CD\",\r\n    \"transactionTypeId\": 3,\r\n    \"TransactionDate\": \"2021-04-03T20:31:57.8565302+01:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"transaction"
+							]
+						},
+						"description": "The request body contains invalid data. The response code should be 400 Bad Request"
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all requests for posting a transaction expecting different response codes"
+		},
+		{
+			"name": "Health checks for ready probe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/health/ready",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"health",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

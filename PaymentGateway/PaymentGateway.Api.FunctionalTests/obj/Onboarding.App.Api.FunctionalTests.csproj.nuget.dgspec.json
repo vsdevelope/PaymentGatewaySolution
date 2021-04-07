@@ -1,0 +1,825 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Api.FunctionalTests\\Onboarding.App.Api.FunctionalTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\Onboarding.App.Api.Clients.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\Onboarding.App.Api.Clients.csproj",
+        "projectName": "Onboarding.App.Api.Clients",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\Onboarding.App.Api.Clients.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Compliance.Contracts": {
+              "target": "Package",
+              "version": "[0.0.1105, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Api.FunctionalTests\\Onboarding.App.Api.FunctionalTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.FunctionalTests\\Onboarding.App.Api.FunctionalTests.csproj",
+        "projectName": "Onboarding.App.Api.FunctionalTests",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.FunctionalTests\\Onboarding.App.Api.FunctionalTests.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.FunctionalTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\Onboarding.App.Api.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\Onboarding.App.Api.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\Onboarding.App.Tests.Common.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\Onboarding.App.Tests.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Artio.Common.Configuration": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Qa": {
+              "target": "Package",
+              "version": "[0.1.96, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MassTransit.Azure.ServiceBus.Core": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Configuration.AzureKeyVault": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.16.0, )"
+            },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.5.14, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.5.14, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\Onboarding.App.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\Onboarding.App.Api.csproj",
+        "projectName": "Onboarding.App.Api",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\Onboarding.App.Api.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\Onboarding.App.Application.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\Onboarding.App.Application.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Artio.Common": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Authentication": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Logging": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Messaging": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.ServiceBus": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.WebApi": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MediatR.Extensions.FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.9.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\Onboarding.App.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\Onboarding.App.Application.csproj",
+        "projectName": "Onboarding.App.Application",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\Onboarding.App.Application.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\Onboarding.App.Api.Clients.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Api.Clients\\Onboarding.App.Api.Clients.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj"
+              },
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Artio.Common": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Messaging": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.ServiceBus": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj",
+        "projectName": "Artio.Onboarding.Contracts",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\Onboarding.App.Contracts.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj",
+        "projectName": "Onboarding.App.Domain",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Artio.Common": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Configuration": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj",
+        "projectName": "Onboarding.App.Persistence",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Domain\\Onboarding.App.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Artio.Common": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Artio.Common.Configuration": {
+              "target": "Package",
+              "version": "[0.4.64, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\Onboarding.App.Tests.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\Onboarding.App.Tests.Common.csproj",
+        "projectName": "Onboarding.App.Tests.Common",
+        "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\Onboarding.App.Tests.Common.csproj",
+        "packagesPath": "C:\\Users\\GaneshAdmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Tests.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Repos\\onboarding-app\\NuGet.Config",
+          "C:\\Users\\GaneshAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/susciperent/_packaging/veritatem-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj": {
+                "projectPath": "C:\\Repos\\onboarding-app\\Onboarding.App.Persistence\\Onboarding.App.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.TestHost": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.15.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

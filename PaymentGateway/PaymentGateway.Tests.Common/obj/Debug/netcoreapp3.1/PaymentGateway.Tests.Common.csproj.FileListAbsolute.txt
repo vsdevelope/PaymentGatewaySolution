@@ -1,0 +1,9 @@
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.AssemblyInfoInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.AssemblyInfo.cs
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.csproj.CoreCompileInputs.cache
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\bin\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.deps.json
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\bin\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.dll
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\bin\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.dll
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.pdb
+C:\Repos\PaymentGateway\PaymentGateway.Tests.Common\obj\Debug\netcoreapp3.1\PaymentGateway.Tests.Common.csprojAssemblyReference.cache
